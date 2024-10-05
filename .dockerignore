@@ -1,0 +1,17 @@
+*~
+coverage*
+dist
+Dockerfile*
+docker-compose*
+.dockerignore
+.editorconfig
+*.env*
+.idea
+.git
+.gitignore
+*.md
+node_modules
+*.sh
+tmp
+*.txt
+.vscode
