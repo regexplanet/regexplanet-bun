@@ -37,5 +37,7 @@ COPY --from=base /usr/bin/dumb-init /usr/bin/dumb-init
 
 # run the app
 USER nonroot
+EXPOSE 4000
+ENV PORT 4000
 ENTRYPOINT [ "/usr/bin/dumb-init", "--" ]
 CMD [ "bun", "run", "server.js" ]
