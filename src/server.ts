@@ -9,7 +9,7 @@ Bun.serve({
       },
     });
   },
-  hostname: process.env.HOSTNAME || "localhost",
+  hostname: process.env.HOSTNAME || "0.0.0.0",
   idleTimeout: 15,
   port: process.env.PORT || 4000,
   static: {
