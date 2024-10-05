@@ -29,6 +29,10 @@ RUN bun run build
 
 # copy production dependencies and source code into final image
 FROM oven/bun:distroless AS release
+ARG COMMIT="(not set)"
+ARG LASTMOD="(not set)"
+ENV COMMIT=$COMMIT
+ENV LASTMOD=$LASTMOD
 WORKDIR /app
 COPY ./static /app/static
 COPY --from=prerelease /usr/src/app/dist/server.js /app
