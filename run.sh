@@ -16,5 +16,4 @@ if [ -f "${ENV_FILE}" ]; then
     export $(cat "${ENV_FILE}")
 fi
 
-#bun run src/server.ts
-bunx nodemon
+bun run --watch --logLevel=debug src/server.ts

@@ -1,7 +1,0 @@
-{
-  "delay": "0",
-  "exec": "bun run --logLevel=debug src/server.ts",
-  "ext": "json,ts",
-  "ignore": [ ".idea/*", "dist/*", "views/*" ],
-  "verbose": true
-}

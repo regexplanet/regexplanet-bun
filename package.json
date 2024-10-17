@@ -1,7 +1,6 @@
 {
   "devDependencies": {
-    "@types/bun": "latest",
-    "nodemon": "^3.1.7"
+    "@types/bun": "latest"
   },
   "module": "src/server.ts",
   "name": "regexplanet-bun",
