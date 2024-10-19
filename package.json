@@ -11,5 +11,8 @@
     "start": "bun run --logLevel=debug dist/server.js",
     "build": "bun build src/server.ts --outdir ./dist"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@regexplanet/common": "npm:@jsr/regexplanet__common"
+  }
 }

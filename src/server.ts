@@ -1,6 +1,6 @@
 import type { Server } from "bun";
-import type { TestInput } from "./types";
-import { runTest } from "./runTest";
+import type { TestInput } from "@regexplanet/common";
+import { runTest } from "@regexplanet/common";
 
 Bun.serve({
   development: process.env.NODE_ENV !== "production",
@@ -13,10 +13,9 @@ Bun.serve({
   },
   hostname: process.env.HOSTNAME || "0.0.0.0",
   idleTimeout: 15,
-  port: process.env.PORT || 4000,
+  port: process.env.PORT || 5000,
   static: {
-    //LATER: "/": Response.redirect("https://www.regexplanet.com/advanced/bun/index.html", 302),
-    "/": new Response("running!"),
+    "/": new Response(`Running Bun v${Bun.version}`),
 
     "/favicon.ico": new Response(await Bun.file("static/favicon.ico").bytes(), {
       headers: {
