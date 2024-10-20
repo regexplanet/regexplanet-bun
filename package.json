@@ -13,6 +13,6 @@
   },
   "type": "module",
   "dependencies": {
-    "@regexplanet/common": "npm:@jsr/regexplanet__common"
+    "@regexplanet/common": "^1.1.0"
   }
 }

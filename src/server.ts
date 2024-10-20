@@ -84,7 +84,7 @@ async function testJson(req: Request, server: Server): Promise<Response> {
         engine: "bun",
         regex: data.get("regex") as string,
         replacement: data.get("replacement") as string,
-        option: data.getAll("option") as string[],
+        options: data.getAll("option") as string[],
         inputs: data.getAll("input") as string[],
       };
     }
@@ -94,7 +94,7 @@ async function testJson(req: Request, server: Server): Promise<Response> {
       engine: searchParams.get("engine") || "bun",
       regex: searchParams.get("regex") || "",
       replacement: searchParams.get("replacement") || "",
-      option: searchParams.getAll("option") as string[],
+      options: searchParams.getAll("option") as string[],
       inputs: searchParams.getAll("input") as string[],
     };
     console.log("searchParams", searchParams);
