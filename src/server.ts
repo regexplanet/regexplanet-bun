@@ -100,11 +100,7 @@ async function testJson(req: Request, server: Server): Promise<Response> {
     console.log("searchParams", searchParams);
   }
 
-  console.log("testInput", testInput);
-
-  const retVal = runTest(testInput);
-
-  console.log("testOutput", retVal);
+  const retVal = await runTest(testInput);
 
   return handleJsonp(req, retVal);
 }
